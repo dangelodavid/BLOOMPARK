@@ -46,7 +46,7 @@ STATS_FILE <- "General_statistics.txt"   # Flat key–value log appended through
 
 # ── RNA-seq (featureCounts) ───────────────────────────────────────────────────
 
-rnaseq_counts_dir <- "/home/dangelo/PD_BT/PPMI_RNAseq_IR3_Analysis/counts"
+rnaseq_counts_dir <- "/PPMI_RNAseq_IR3_Analysis/counts"
 
 fc_files <- list.files(
   rnaseq_counts_dir,
@@ -85,7 +85,7 @@ cat("RNAseq_genes",   nrow(rnaseq_counts_raw),       "\n", file = STATS_FILE, ap
 
 # ── miRNA-seq (pre-assembled matrix) ─────────────────────────────────────────
 
-mirna_counts_dir <- "/home/dangelo/PD_BT/PPMI_sncRNAcounts/counts"
+mirna_counts_dir <- "/PPMI_sncRNAcounts/counts"
 
 mirna_counts_raw <- fread(file.path(mirna_counts_dir, "mirna_quantification_matrix_raw.csv"))
 
@@ -112,7 +112,7 @@ cat("miRNA_genes",   nrow(mirna_counts_raw),       "\n", file = STATS_FILE, appe
 # ── Core clinical metadata ────────────────────────────────────────────────────
 
 metadata_raw <- readxl::read_excel(
-  "/home/dangelo/PD_BT/PPMI_Curated_Data_Cut_Public_20250714.xlsx"
+  "PPMI_Curated_Data_Cut_Public_20250714.xlsx"
 )
 
 metadata_raw <- metadata_raw %>%
@@ -150,7 +150,7 @@ metadata_nsd <- metadata_nsd %>%
 # Only rows with GI/L units are used (cellular blood counts: WBC, Platelets, etc.)
 
 blood_chem_raw <- read.delim(
-  "/home/dangelo/PD_BT/Blood_Chemistry___Hematology-Archived_05Sep2025.csv",
+  "Blood_Chemistry___Hematology-Archived_05Sep2025.csv",
   sep    = ",",
   header = TRUE
 )
