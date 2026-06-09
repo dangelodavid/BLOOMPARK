@@ -1,4 +1,7 @@
 # =============================================================================
+# BLOOMPARK
+# BLOOd Multi-omics for PARKinson Disease's early detection
+#
 # Comprehensive Multi-Transcriptomic Analysis of Peripheral Blood to Identify
 # Key Genes in Parkinson's Disease
 #
